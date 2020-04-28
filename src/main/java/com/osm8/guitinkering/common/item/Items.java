@@ -12,6 +12,7 @@ public class Items {
     public static List<Item> ITEMS = new ArrayList<Item>();
 
     public static final Item COFFEE = register(new ItemCoffee(), "coffee");
+    public static final Item CUP = register(new ItemCup(), "cup");
 
     public static Item register(Item item, String name) {
         item.setRegistryName(new ResourceLocation(GuiTinkering.MODID, name));

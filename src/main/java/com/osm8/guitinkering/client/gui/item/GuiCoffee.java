@@ -9,7 +9,7 @@ public class GuiCoffee extends GuiScreen {
     public static final int ITEM_COFFEE_GUI_ID = 1;
     public void initGui()
     {
-        this.addButton(new GuiButton(1, this.width/2 - 300, this.height/2 - 100, 200, 20, "Spawn a slime"));
+        this.addButton(new GuiButton(1, this.width/2 - 100, this.height/2 - 100, 200, 20, "Spawn a slime"));
     }
 
     protected void actionPerformed(GuiButton button) throws IOException

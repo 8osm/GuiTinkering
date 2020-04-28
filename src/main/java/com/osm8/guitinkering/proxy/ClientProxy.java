@@ -9,9 +9,7 @@ public class ClientProxy implements BaseProxy {
     public void preInit(FMLPreInitializationEvent event) { }
 
     @Override
-    public void init(FMLInitializationEvent event) {
-        System.out.println("~~~~called init in clientproxy~~~~");
-    }
+    public void init(FMLInitializationEvent event) { }
 
     @Override
     public void postInit(FMLPostInitializationEvent event) { }
