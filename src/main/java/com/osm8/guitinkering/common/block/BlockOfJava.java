@@ -22,10 +22,7 @@ public class BlockOfJava extends BlockBase {
 
     @Override
     public boolean onBlockActivated(World worldIn, BlockPos pos, IBlockState state, EntityPlayer playerIn, EnumHand hand, EnumFacing facing, float hitX, float hitY, float hitZ) {
-        if (!worldIn.isRemote){
-            playerIn.openGui(GuiTinkering.instance, GuiJavaBlock.BLOCK_JAVA_GUI_ID, worldIn, (int) playerIn.posX, (int) playerIn.posY, (int) playerIn.posZ);
-            return true;
-        }
+        playerIn.openGui(GuiTinkering.instance, GuiJavaBlock.BLOCK_JAVA_GUI_ID, worldIn, (int) playerIn.posX, (int) playerIn.posY, (int) playerIn.posZ);
         return true;
     }
 }

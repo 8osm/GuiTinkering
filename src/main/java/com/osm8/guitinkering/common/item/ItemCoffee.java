@@ -18,10 +18,7 @@ public class ItemCoffee extends ItemBase{
 
     @Override
     public ActionResult<ItemStack> onItemRightClick(World worldIn, EntityPlayer playerIn, EnumHand handIn) {
-        if(!worldIn.isRemote){
-            playerIn.openGui(GuiTinkering.instance, GuiCoffee.ITEM_COFFEE_GUI_ID, worldIn, (int) playerIn.posX, (int) playerIn.posY, (int) playerIn.posZ);
-            return new ActionResult<>(EnumActionResult.PASS, playerIn.getHeldItem(handIn));
-        }
+        playerIn.openGui(GuiTinkering.instance, GuiCoffee.ITEM_COFFEE_GUI_ID, worldIn, (int) playerIn.posX, (int) playerIn.posY, (int) playerIn.posZ);
         return new ActionResult<>(EnumActionResult.PASS, playerIn.getHeldItem(handIn));
     }
 }
