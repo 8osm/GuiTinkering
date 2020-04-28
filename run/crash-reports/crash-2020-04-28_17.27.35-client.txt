@@ -1,0 +1,121 @@
+---- Minecraft Crash Report ----
+// Sorry :(
+
+Time: 4/28/20 5:27 PM
+Description: Unexpected error
+
+java.lang.RuntimeException: java.lang.NoSuchFieldException: buttonList
+	at net.minecraftforge.fml.common.eventhandler.EventBus.post(EventBus.java:189)
+	at net.minecraft.client.Minecraft.displayGuiScreen(Minecraft.java:1063)
+	at net.minecraft.client.Minecraft.displayInGameMenu(Minecraft.java:1569)
+	at net.minecraft.client.Minecraft.runTickKeyboard(Minecraft.java:2087)
+	at net.minecraft.client.Minecraft.runTick(Minecraft.java:1934)
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1187)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:441)
+	at net.minecraft.client.main.Main.main(Main.java:118)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135)
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at net.minecraftforge.gradle.GradleStartCommon.launch(GradleStartCommon.java:97)
+	at GradleStart.main(GradleStart.java:25)
+Caused by: java.lang.NoSuchFieldException: buttonList
+	at java.lang.Class.getDeclaredField(Class.java:2070)
+	at com.osm8.guitinkering.client.handlers.GuiEventHandler.injectGuiButtons(GuiEventHandler.java:26)
+	at net.minecraftforge.fml.common.eventhandler.ASMEventHandler_4_GuiEventHandler_injectGuiButtons_GuiOpenEvent.invoke(.dynamic)
+	at net.minecraftforge.fml.common.eventhandler.ASMEventHandler.invoke(ASMEventHandler.java:90)
+	at net.minecraftforge.fml.common.eventhandler.EventBus.post(EventBus.java:182)
+	... 19 more
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Thread: Client thread
+Stacktrace:
+	at net.minecraftforge.fml.common.eventhandler.EventBus.post(EventBus.java:189)
+	at net.minecraft.client.Minecraft.displayGuiScreen(Minecraft.java:1063)
+	at net.minecraft.client.Minecraft.displayInGameMenu(Minecraft.java:1569)
+	at net.minecraft.client.Minecraft.runTickKeyboard(Minecraft.java:2087)
+
+-- Affected level --
+Details:
+	Level name: MpServer
+	All players: 1 total; [EntityPlayerSP['Player846'/6, l='MpServer', x=311.76, y=4.00, z=-498.81]]
+	Chunk stats: MultiplayerChunkCache: 529, 529
+	Level seed: 0
+	Level generator: ID 01 - flat, ver 0. Features enabled: false
+	Level generator options: 
+	Level spawn location: World: (313,4,-501), Chunk: (at 9,0,11 in 19,-32; contains blocks 304,0,-512 to 319,255,-497), Region: (0,-1; contains chunks 0,-32 to 31,-1, blocks 0,0,-512 to 511,255,-1)
+	Level time: 1981 game time, 1981 day time
+	Level dimension: 0
+	Level storage version: 0x00000 - Unknown?
+	Level weather: Rain time: 0 (now: false), thunder time: 0 (now: false)
+	Level game mode: Game mode: creative (ID 1). Hardcore: false. Cheats: false
+	Forced entities: 33 total; [EntitySlime['Slime'/2, l='MpServer', x=335.49, y=4.14, z=-475.42], EntitySlime['Slime'/11651, l='MpServer', x=367.09, y=4.17, z=-466.10], EntitySlime['Slime'/249088, l='MpServer', x=321.91, y=4.00, z=-530.84], EntitySlime['Slime'/64451, l='MpServer', x=390.26, y=4.81, z=-435.58], EntityPlayerSP['Player846'/6, l='MpServer', x=311.76, y=4.00, z=-498.81], EntityChicken['Chicken'/77897, l='MpServer', x=325.21, y=4.00, z=-534.46], EntitySlime['Slime'/141130, l='MpServer', x=366.54, y=5.17, z=-443.43], EntitySlime['Slime'/307276, l='MpServer', x=330.96, y=4.96, z=-466.97], EntitySlime['Slime'/57993, l='MpServer', x=321.43, y=4.00, z=-458.98], EntitySheep['Sheep'/77896, l='MpServer', x=310.25, y=4.00, z=-522.67], EntitySlime['Slime'/312973, l='MpServer', x=246.35, y=4.00, z=-432.62], EntityChicken['Chicken'/77898, l='MpServer', x=300.50, y=4.00, z=-521.50], EntitySlime['Slime'/208979, l='MpServer', x=363.09, y=5.10, z=-466.35], EntitySlime['Slime'/239057, l='MpServer', x=362.16, y=5.08, z=-426.35], EntitySlime['Slime'/202454, l='MpServer', x=378.84, y=4.95, z=-430.24], EntitySlime['Slime'/297309, l='MpServer', x=353.51, y=5.08, z=-422.78], EntityCow['Cow'/77917, l='MpServer', x=252.50, y=4.00, z=-421.50], EntitySlime['Slime'/63967, l='MpServer', x=369.05, y=5.17, z=-537.74], EntityCow['Cow'/77918, l='MpServer', x=254.50, y=4.00, z=-420.50], EntitySlime['Slime'/23969, l='MpServer', x=332.93, y=4.00, z=-457.64], EntitySlime['Slime'/214753, l='MpServer', x=342.58, y=4.00, z=-464.86], EntityCow['Cow'/77925, l='MpServer', x=333.50, y=4.00, z=-560.50], EntityPig['Pig'/77924, l='MpServer', x=331.50, y=4.00, z=-561.50], EntityCow['Cow'/77927, l='MpServer', x=336.50, y=4.00, z=-562.50], EntityCow['Cow'/77926, l='MpServer', x=337.27, y=4.00, z=-567.15], EntitySlime['Slime'/219179, l='MpServer', x=252.51, y=5.00, z=-441.79], EntitySlime['Slime'/288173, l='MpServer', x=243.05, y=4.00, z=-446.94], EntitySlime['Slime'/173480, l='MpServer', x=351.41, y=4.28, z=-528.74], EntitySlime['Slime'/82549, l='MpServer', x=384.38, y=4.33, z=-421.54], EntitySlime['Slime'/167156, l='MpServer', x=240.74, y=4.14, z=-484.79], EntitySlime['Slime'/289523, l='MpServer', x=249.76, y=5.17, z=-436.97], EntitySlime['Slime'/62334, l='MpServer', x=352.03, y=4.00, z=-463.37], EntitySlime['Slime'/64895, l='MpServer', x=373.96, y=4.00, z=-421.93]]
+	Retry entities: 0 total; []
+	Server brand: fml,forge
+	Server type: Integrated singleplayer server
+Stacktrace:
+	at net.minecraft.client.multiplayer.WorldClient.addWorldInfoToCrashReport(WorldClient.java:461)
+	at net.minecraft.client.Minecraft.addGraphicsAndWorldToCrashReport(Minecraft.java:2888)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:470)
+	at net.minecraft.client.main.Main.main(Main.java:118)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135)
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at net.minecraftforge.gradle.GradleStartCommon.launch(GradleStartCommon.java:97)
+	at GradleStart.main(GradleStart.java:25)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.12.2
+	Operating System: Mac OS X (x86_64) version 10.13.6
+	Java Version: 1.8.0_232, AdoptOpenJDK
+	Java VM Version: OpenJDK 64-Bit Server VM (mixed mode), AdoptOpenJDK
+	Memory: 224852904 bytes (214 MB) / 667942912 bytes (637 MB) up to 1908932608 bytes (1820 MB)
+	JVM Flags: 0 total; 
+	IntCache: cache: 0, tcache: 0, allocated: 0, tallocated: 0
+	FML: MCP 9.42 Powered by Forge 14.23.5.2768 5 mods loaded, 5 mods active
+	States: 'U' = Unloaded 'L' = Loaded 'C' = Constructed 'H' = Pre-initialized 'I' = Initialized 'J' = Post-initialized 'A' = Available 'D' = Disabled 'E' = Errored
+
+	| State     | ID           | Version      | Source                           | Signature |
+	|:--------- |:------------ |:------------ |:-------------------------------- |:--------- |
+	| UCHIJAAAA | minecraft    | 1.12.2       | minecraft.jar                    | None      |
+	| UCHIJAAAA | mcp          | 9.42         | minecraft.jar                    | None      |
+	| UCHIJAAAA | FML          | 8.0.99.99    | forgeSrc-1.12.2-14.23.5.2768.jar | None      |
+	| UCHIJAAAA | forge        | 14.23.5.2768 | forgeSrc-1.12.2-14.23.5.2768.jar | None      |
+	| UCHIJAAAA | guitinkering | 1.0          | main                             | None      |
+
+	Loaded coremods (and transformers): 
+	GL info: ' Vendor: 'ATI Technologies Inc.' Version: '2.1 ATI-1.68.20' Renderer: 'AMD Radeon Barts PRO Prototype OpenGL Engine'
+	Launched Version: 1.12.2
+	LWJGL: 2.9.2
+	OpenGL: AMD Radeon Barts PRO Prototype OpenGL Engine GL version 2.1 ATI-1.68.20, ATI Technologies Inc.
+	GL Caps: Using GL 1.3 multitexturing.
+Using GL 1.3 texture combiners.
+Using framebuffer objects because ARB_framebuffer_object is supported and separate blending is supported.
+Shaders are available because OpenGL 2.1 is supported.
+VBOs are available because OpenGL 1.5 is supported.
+
+	Using VBOs: Yes
+	Is Modded: Definitely; Client brand changed to 'fml,forge'
+	Type: Client (map_client.txt)
+	Resource Packs: 
+	Current Language: English (US)
+	Profiler Position: N/A (disabled)
+	CPU: 4x Intel(R) Core(TM) i3-2120 CPU @ 3.30GHz
